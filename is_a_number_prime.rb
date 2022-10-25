@@ -1,14 +1,15 @@
 # frozen_string_literal: true
+
 require 'prime'
 
-class Task
-  attr_accessor :str
+class IsNumberPrime
+  attr_accessor :num
 
   def initialize(num)
     @num = num
   end
 
   def call
-    @num.prime?
+    num.prime?
   end
 end
