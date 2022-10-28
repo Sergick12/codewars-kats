@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# DuplicateEncoder
 class DuplicateEncoder
   attr_accessor :word
 
@@ -10,7 +11,7 @@ class DuplicateEncoder
   def call
     word.split('').map do |item|
       if word.split('').select do |element|
-        item.downcase === element.downcase
+        item.downcase == element.downcase
       end
              .size > 1
         ')'
