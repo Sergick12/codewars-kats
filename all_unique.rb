@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 class AllUnique
   attr_accessor :str
 
@@ -7,7 +8,7 @@ class AllUnique
   end
 
   def call
-    str.split('').each{|x|  return false if str.count(x) > 1}
+    str.split('').each { |x| return false if str.count(x) > 1 }
     true
   end
 end
