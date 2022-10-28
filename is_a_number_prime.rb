@@ -2,6 +2,7 @@
 
 require 'prime'
 
+# class IsNumberPrime
 class IsNumberPrime
   attr_accessor :num
 
