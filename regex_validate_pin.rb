@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# RegexValidatePIN
 class RegexValidatePIN
   attr_accessor :pin
 
