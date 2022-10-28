@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# AllUnique
 class AllUnique
   attr_accessor :str
 
