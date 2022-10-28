@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# Incrementer
 class Incrementer
   attr_accessor :nums
 
@@ -8,6 +9,6 @@ class Incrementer
   end
 
   def call
-    nums.map.each_with_index {|el, index| (el + index + 1) % 10}
+    nums.map.each_with_index { |el, index| (el + index + 1) % 10 }
   end
 end
