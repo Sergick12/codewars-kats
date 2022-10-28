@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# ConvertStrToFloat
 class ConvertSrtToFloat
   attr_accessor :string_array
 
