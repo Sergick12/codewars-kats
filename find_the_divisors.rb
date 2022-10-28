@@ -1,19 +1,20 @@
 # frozen_string_literal: true
 
+# FindTheDivisirs
 class FindTheDivisors
-  attr_accessor :n
+  attr_accessor :value
 
-  def initialize(n)
-    @n = n
+  def initialize(value)
+    @value = value
   end
 
   def call
-    count = n - 1
+    count = value - 1
     arr = []
     while count > 1
-      (n % count).zero? ? arr << count : count
+      (value % count).zero? ? arr << count : count
       count -= 1
     end
-    arr.length.positive? ? arr.reverse : "#{n} is prime"
+    arr.length.positive? ? arr.reverse : "#{value} is prime"
   end
 end
