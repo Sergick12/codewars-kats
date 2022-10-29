@@ -1,21 +1,21 @@
 # frozen_string_literal: true
 
-require 'prime'
+# GeometricSequence
+class GeometricSequence
+  attr_accessor :temp, :count_step, :factor
 
-class IsNumberPrime
-  attr_accessor :a, :r, :n
-
-  def initialize(a, r, n)
-    @a = a
-    @r = r
-    @n = n
+  def initialize(temp, factor, count_step)
+    @temp = temp
+    @factor = factor
+    @count_step = count_step
   end
 
   def call
-    (0...n - 1).map { 
-      @a = r * a
-    }
+    arr_res = []
+    count_step.times do
+      arr_res << temp.to_s
+      @temp *= factor
+    end
+    arr_res.join(', ')
   end
 end
-
-p IsNumberPrime.new(2,3,5).call
