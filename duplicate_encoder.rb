@@ -9,15 +9,8 @@ class DuplicateEncoder
   end
 
   def call
-    word.split('').map do |item|
-      if word.split('').select do |element|
-        item.downcase == element.downcase
-      end
-             .size > 1
-        ')'
-      else
-        '('
-      end
+    word.split('').map do |leter|
+      word.count(leter) > 1 ? ')' : '('
     end.join('')
   end
 end
