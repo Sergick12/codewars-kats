@@ -9,7 +9,10 @@ class RegexValidatePIN
   end
 
   def call
-    ((pin.split('').map { |x| x.to_i.to_s }.join <=> pin).zero? ? true : false) &&
+    (f.zero? ? true : false) &&
       (pin.length == 4 || pin.length == 6)
+  end
+  def f
+    pin.split('').map { |x| x.to_i.to_s }.join <=> pin
   end
 end
