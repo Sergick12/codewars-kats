@@ -9,8 +9,6 @@ class SumEvenNumbers
   end
 
   def call
-    res = 0
-    seq.each { |el| res += el if (el % 2).zero? }
-    res
+    seq.select(&:even?).sum
   end
 end
