@@ -15,6 +15,6 @@ class FindTheDivisors
       (value % count).zero? ? arr << count : count
       count -= 1
     end
-    arr.length.positive? ? arr.reverse : "#{value} is prime"
+    arr.empty? ? "#{value} is prime" : arr.reverse
   end
 end
