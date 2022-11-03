@@ -9,12 +9,14 @@ class WelrdStringCase
   end
 
   def call
-    count = -1
-    string.each_char.map do |value|
-      count = 0 if value == ' '
-      count += 1
-      (count % 2).zero? ? value.upcase : value.downcase
-    end.join
+    words.map { |word| change_case(word) }.join(' ')
+  end
+
+  def words
+    string.split(' ')
+  end
+
+  def change_case(word)
+    word.split('').map.with_index { |leter, index| index.even? ? leter.upcase : leter.downcase }.join
   end
 end
-
